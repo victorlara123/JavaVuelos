@@ -6,7 +6,7 @@ import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import dao.ClienteDAOImpl;
-import estructuras.Cola;
+
 
 
 public class frmGestionCliente extends javax.swing.JFrame {

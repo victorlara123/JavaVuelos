@@ -12,8 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
-import estructuras.ListaCircularDoble;
-import estructuras.ListaDoble;
+
 
 /**
  *
@@ -152,7 +151,7 @@ public class AdministradorDAOImpl implements RepositorioDAO<Administrador, Integ
     }
 
     public List<Administrador> leerTodo() {
-        //ListaDoble<Administrador> listaAdministradores = new ListaDoble<>();
+       
         List<Administrador> listaAdministradores =new ArrayList<>();
         try {
             //Obtenemos la conexion

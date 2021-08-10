@@ -14,7 +14,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import dao.AdministradorDAOImpl;
-import estructuras.ListaDoble;
 import model.Cliente;
 
 public class frmAdministrarCuentas extends javax.swing.JFrame {

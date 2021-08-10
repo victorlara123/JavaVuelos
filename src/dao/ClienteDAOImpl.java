@@ -11,7 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import estructuras.Cola;
 import model.Cliente;
 
 /**
@@ -111,7 +110,7 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
         return resultado;
     }
     public List<Cliente> consultarUsuarios() {
-      //  Cola<Cliente> colaClientes = new Cola<>();
+    
         List<Cliente> clientes =new ArrayList<>();
         Cliente user;
         try {
@@ -196,7 +195,6 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
     }
 
     public List<Cliente> leerTodo() {
-       // Cola<Cliente> colaClientes = new Cola<>();
        List<Cliente> clientes =new ArrayList<>();
         try {
             //Obtenemos la conexion

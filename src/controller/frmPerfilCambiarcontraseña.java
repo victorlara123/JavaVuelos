@@ -13,14 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import dao.AdministradorDAOImpl;
-import estructuras.Cola;
+
 
 public class frmPerfilCambiarcontraseña extends javax.swing.JFrame {
 
     ClienteDAOImpl clienteReposi = new ClienteDAOImpl();
     AdministradorDAOImpl adminReposi = new AdministradorDAOImpl();
     private Cliente cliente;
-    //private Cola<Cliente> clientes = new Cola<>();
+    
     List<Cliente> clientes =new ArrayList<>();
     private Administrador administrador;
     private List<Administrador> administradores = new ArrayList<>();
