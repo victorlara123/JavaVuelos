@@ -110,8 +110,9 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
         }
         return resultado;
     }
-    public Cola<Cliente> consultarUsuarios() {
-        Cola<Cliente> colaClientes = new Cola<>();
+    public List<Cliente> consultarUsuarios() {
+      //  Cola<Cliente> colaClientes = new Cola<>();
+        List<Cliente> clientes =new ArrayList<>();
         Cliente user;
         try {
             //Obtenemos la conexion
@@ -141,7 +142,7 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
                 user.setEmail(email);
                 user.setNumerocuenta(numc);
                 
-                colaClientes.encolar(user);
+                clientes.add(user);
             }
 
         } catch (SQLException ex) {
@@ -149,7 +150,7 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
         } finally {
             acceso.cerrarConexion(conexion, ps);
         }
-        return colaClientes;
+        return clientes;
 
     }
   
@@ -194,8 +195,9 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
 
     }
 
-    public Cola<Cliente> leerTodo() {
-        Cola<Cliente> colaClientes = new Cola<>();
+    public List<Cliente> leerTodo() {
+       // Cola<Cliente> colaClientes = new Cola<>();
+       List<Cliente> clientes =new ArrayList<>();
         try {
             //Obtenemos la conexion
             conexion = acceso.getConexion();
@@ -223,13 +225,13 @@ public class ClienteDAOImpl implements RepositorioDAO<Cliente, Integer> {
                 nuevouser.setEmail(email);
                 nuevouser.setNumerocuenta(numc);
 
-                colaClientes.encolar(nuevouser);
+                clientes.add(nuevouser);
             }
 
         } catch (SQLException ex) {
 
         }
-        return colaClientes;
+        return clientes;
 
     }
 

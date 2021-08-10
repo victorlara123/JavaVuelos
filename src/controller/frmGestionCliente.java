@@ -67,7 +67,7 @@ public class frmGestionCliente extends javax.swing.JFrame {
         }
     }
     
-    private void mostrarListaUsers(Cola<Cliente> cola) {
+    private void mostrarListaUsers(List<Cliente> cola) {
         DefaultTableModel dtm = (DefaultTableModel) tDatos.getModel();
         dtm.setRowCount(0);
         Iterator iterator = cola.iterator();
@@ -534,8 +534,8 @@ public class frmGestionCliente extends javax.swing.JFrame {
             txtEmail.setText(ad.getEmail());
             txtncuenta.setText(String.valueOf(ad.getNumerocuenta()));
             
-            Cola<Cliente> colaUsers= new Cola<>();
-            colaUsers.encolar(ad);
+            List<Cliente> colaUsers= new ArrayList<>();
+            colaUsers.add(ad);
             mostrarListaUsers(colaUsers);            
             btnEditar.setEnabled(true);
             btnEliminar.setEnabled(true);

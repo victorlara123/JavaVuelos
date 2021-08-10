@@ -19,8 +19,10 @@ public class frmLogin extends javax.swing.JFrame {
     
     ClienteDAOImpl clienteReposi = new ClienteDAOImpl();
     AdministradorDAOImpl adminReposi = new AdministradorDAOImpl();
-    private Cola<Cliente> clientes = new Cola<>();
-    private ListaDoble<Administrador> administradores = new ListaDoble<>();
+    //private Cola<Cliente> clientes = new Cola<>();
+    List<Cliente> clientes=new ArrayList<>();
+   // private ListaDoble<Administrador> administradores = new ListaDoble<>();
+    List<Administrador> administradores=new ArrayList<>();
     
     
     public frmLogin() {

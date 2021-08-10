@@ -53,7 +53,7 @@ public class frmAdministrarCuentas extends javax.swing.JFrame {
         
     }*/
     
-    private void mostrarListaAdmins(ListaDoble<Administrador> lista) {
+    private void mostrarListaAdmins(List<Administrador> lista) {
         DefaultTableModel dtm = (DefaultTableModel) tDatos.getModel();
         dtm.setRowCount(0);
         Iterator iterator = lista.iterator();
@@ -488,8 +488,8 @@ public class frmAdministrarCuentas extends javax.swing.JFrame {
             }
             txtEmail.setText(ad.getEmail());
 
-            ListaDoble<Administrador> listaAdmins = new ListaDoble<>();
-            listaAdmins.agregarFinal(ad);
+            List<Administrador> listaAdmins = new ArrayList<>();
+            listaAdmins.add(ad);
             mostrarListaAdmins(listaAdmins);            
             btnEditar.setEnabled(true);
             btnEliminar.setEnabled(true);

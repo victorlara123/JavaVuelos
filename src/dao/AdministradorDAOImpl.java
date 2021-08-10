@@ -151,8 +151,9 @@ public class AdministradorDAOImpl implements RepositorioDAO<Administrador, Integ
 
     }
 
-    public ListaDoble<Administrador> leerTodo() {
-        ListaDoble<Administrador> listaAdministradores = new ListaDoble<>();
+    public List<Administrador> leerTodo() {
+        //ListaDoble<Administrador> listaAdministradores = new ListaDoble<>();
+        List<Administrador> listaAdministradores =new ArrayList<>();
         try {
             //Obtenemos la conexion
             conexion = acceso.getConexion();
@@ -179,7 +180,7 @@ public class AdministradorDAOImpl implements RepositorioDAO<Administrador, Integ
                 nuevoAdmin.setSexo(sexo);
                 nuevoAdmin.setEmail(email);
 
-                listaAdministradores.agregarFinal(nuevoAdmin);
+                listaAdministradores.add(nuevoAdmin);
             }
 
         } catch (SQLException ex) {
