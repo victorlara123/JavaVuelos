@@ -20,7 +20,8 @@ public class frmPerfilCambiarcontraseña extends javax.swing.JFrame {
     ClienteDAOImpl clienteReposi = new ClienteDAOImpl();
     AdministradorDAOImpl adminReposi = new AdministradorDAOImpl();
     private Cliente cliente;
-    private Cola<Cliente> clientes = new Cola<>();
+    //private Cola<Cliente> clientes = new Cola<>();
+    List<Cliente> clientes =new ArrayList<>();
     private Administrador administrador;
     private List<Administrador> administradores = new ArrayList<>();
 
